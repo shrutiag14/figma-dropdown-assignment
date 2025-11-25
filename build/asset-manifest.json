@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/figma-dropdown-assignment/static/css/main.727ea8d2.css",
+    "main.js": "/figma-dropdown-assignment/static/js/main.359e2671.js",
+    "index.html": "/figma-dropdown-assignment/index.html",
+    "main.727ea8d2.css.map": "/figma-dropdown-assignment/static/css/main.727ea8d2.css.map",
+    "main.359e2671.js.map": "/figma-dropdown-assignment/static/js/main.359e2671.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.727ea8d2.css",
+    "static/js/main.359e2671.js"
+  ]
+}
