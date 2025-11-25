@@ -1,0 +1,170 @@
+.dropdown-container {
+  position: relative;
+  width: 392px;
+  /* use Montserrat for all text to match Figma */
+  font-family: 'Montserrat', system-ui, -apple-system, 'Inter', sans-serif;
+  /* website black color for all text */
+  color: #1F2128;
+}
+
+/* Load Montserrat for the 'All pages' label (from Figma) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+.dropdown-btn {
+  width: 100%;
+  background: white;
+  border: 1px solid #e6e6e6;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #222;
+}
+
+.arrow {
+  transition: transform 0.18s ease;
+  font-size: 12px;
+  color: #666;
+}
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-panel {
+  position: relative;
+  top: 56px;
+  /* outer width set to 370px, side padding 15px gives inner width 340px */
+  width: 370px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 15px; /* top/bottom 10px, left/right 15px -> inner width 340px */
+  box-shadow: 0 8px 15px rgba(20,20,20,0.12), 0 0 4px rgba(20,20,20,0.10);
+  border: 1px solid #EEEEEE;
+  z-index: 20;
+  box-sizing: border-box;
+}
+
+.dropdown-row,
+.page-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 4px;
+  font-size: 15px;
+  color: inherit; /* inherit website color */
+  font-weight: 400;
+}
+
+.dropdown-row.top-row {
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+
+.row-label {
+  /* left-aligned label that fills available space */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px; /* match .page-item font-size */
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  flex: 1 1 auto; /* take remaining horizontal space */
+  text-align: left;
+  padding-left: 0;
+}
+
+.page-label {
+  color: inherit;
+}
+
+.pages-list {
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.divider {
+  height: 1px;
+  background: #EAEAEA;
+  margin: 10px 0 18px; /* more space below the line before the button */
+  width: 100%;
+}
+
+.done-btn {
+  /* span the inner content width (100% of panel inner) */
+  width: 100%;
+  max-width: 340px;
+  height: 40px;
+  background: #FFCE22; /* Figma: #FFCE22 */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  display: block;
+  margin: 16px 0 0 0; /* increased gap from divider */
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.06);
+  box-sizing: border-box;
+}
+
+.done-btn:hover {
+  background: #f0b400; /* slightly darker on hover */
+}
+
+/* Custom checkbox styles */
+.checkbox-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox-wrapper .native-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-custom {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  border: 1.5px solid #e6e6e6;
+  background: #fff;
+  box-sizing: border-box;
+  transition: all 0.14s ease;
+}
+
+.checkbox-wrapper .native-checkbox:checked + .checkbox-custom {
+  background: #2b78ff;
+  border-color: #2b78ff;
+}
+
+.checkbox-wrapper .native-checkbox:checked + .checkbox-custom::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+
+/* Responsive small tweaks */
+@media (max-width: 420px) {
+  .dropdown-container { width: 100%; }
+  .dropdown-panel { width: calc(100% - 24px); }
+}
