@@ -14,7 +14,7 @@ npm install
 npm start
 ```
 
-Open the app at `http://localhost:3000`.
+Open the app at `[http://localhost:3000](https://shrutiag14.github.io/figma-dropdown-assignment/)`.
 
 ## Component behavior
 - The component renders as an always-visible card (no dropdown trigger).
